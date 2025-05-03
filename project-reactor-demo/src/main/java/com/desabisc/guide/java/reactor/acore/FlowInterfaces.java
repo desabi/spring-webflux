@@ -14,10 +14,12 @@ public class FlowInterfaces {
 
     // Produces items that can be consumed by subscribers
     // Accepts subscriber registrations
+    // Emits data (e.g., Flux, Mono in Reactor).
     Publisher publisher; // void subscribe(Subscriber<? super T> subscriber);
 
     // Receives items from a publisher
     // Methods are called in strict sequence: onSubscribe → onNext* → (onError | onComplete)
+    // Consumes data (reacts to onNext, onError, onComplete).
     Subscriber subscriber;
     /*
     void onSubscribe(Subscription subscription);
@@ -29,6 +31,7 @@ public class FlowInterfaces {
     // Controls the flow between publisher and subscriber
     // request(n) - asks for n more items (back pressure)
     // cancel() - stops receiving items
+    // Links Publisher and Subscriber (controls demand via request(n)).
     Subscription subscription;
     /*
     void request(long n);
