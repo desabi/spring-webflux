@@ -7,7 +7,8 @@ import java.util.concurrent.Flow.Subscription;
 
 /**
  * Reactive Streams is a standard for asynchronous stream processing with non-blocking back pressure,
- * introduced in Java 9 as part of the java.util.concurrent.Flow API. It provides a common interface for reactive programming libraries to ensure interoperability.
+ * introduced in Java 9 as part of the java.util.concurrent.Flow API.
+ * It provides a common interface for reactive programming libraries to ensure interoperability.
  */
 public class FlowInterfaces {
   public static void main(String[] args) {
